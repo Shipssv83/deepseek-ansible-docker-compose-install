@@ -1,0 +1,37 @@
+---
+- name: create dirs
+  ansible.builtin.file:
+    path: "{{ path }}"
+    state: directory
+    mode: "0755"
+    recurse: true
+
+- name: transfer files
+  ansible.builtin.template:
+    src: "{{ item.src }}"
+    dest: '{{ item.dest }}'
+    mode: '{{ item.mode }}'
+  loop:
+    - { src: env.j2, dest: '{{ path }}/.env', mode: '644' }
+    - { src: docker-compose.yml.j2, dest: '{{ path }}/docker-compose.yml', mode: '644' }
+
+- name: Ensure 'python3-requests' is installed via apt
+  ansible.builtin.apt:
+    name: python3-requests
+    state: present
+  become: true
+
+- name: Ensure Docker network is created
+  community.docker.docker_network:
+    name: network
+    state: present
+
+- name: run docker-compose up
+  ansible.builtin.shell: docker-compose up --build -d
+  args:
+    chdir: '{{ path }}'
+  ignore_errors: true
+  register: output
+
+- ansible.builtin.debug:
+    var: output

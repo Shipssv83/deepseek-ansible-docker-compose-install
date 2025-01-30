@@ -1,0 +1,30 @@
+---
+  - name: include server install play
+    ansible.builtin.import_playbook: server-install.yml
+
+  - name: include docker install play
+    ansible.builtin.import_playbook: docker-install.yml
+
+  - name: ollama install
+    become: true
+    hosts: '{{ host }}'
+
+    vars:
+      nginx: "10.0.0.5"
+      fqdn: "example.com"
+      ollama_hostname: "openia.{{ fqdn }}"
+      ollama_port: "8080"
+
+    roles:
+      - roles/ollama-docker-install
+
+    tasks:
+
+    - name: configure ufw port allowed ip
+      community.general.system.ufw:
+        rule: allow
+        route: yes
+        src: "{{ nginx }}"
+        port: '{{ ollama_port }}'
+        proto: tcp
+        comment: configure ufw port allowed ip
