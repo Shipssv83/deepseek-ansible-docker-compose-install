@@ -3,9 +3,21 @@ Hi, ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-91
 
 -------------------------------
 
-### Socials
+## 🛠️ Technologies & Tools
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="Linux logo" />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/gnubash/4EAA25" height="40" alt="Bash logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" height="40" alt="Ansible logo" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="Docker logo" />
+  <img width="12" />
+</div>
+
+## 🌐 Connect with Me
 <p align="left">
-  <a href="https://t.me/oneitpro">
+  <a href="https://t.me/OenITConsultant_bot">
     <img src="https://img.icons8.com/ios-glyphs/30/ffffff/telegram-app.png" alt="Telegram" width="30" height="30" />
   </a>
   <a href="https://www.linkedin.com/in/sergey-shipilov-7262a31b4/">
@@ -20,8 +32,8 @@ Hi, ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-91
   <a href="https://discord.com/invite/6z5EyagDyW?ref=1it.pro">
     <img src="https://img.icons8.com/ios-glyphs/30/ffffff/discord.png" alt="Discord" width="30" height="30" />
   </a>
-  <a href="mailto:admin@1it.pro">
-    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/new-post.png" alt="Mail" width="30" height="30" />
+  <a href="mailto:admin@mail.1it.pro">
+    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/new-post.png" alt="Email" width="30" height="30" />
   </a>
   <a href="https://1it.pro/">
     <img src="https://img.icons8.com/ios-glyphs/30/ffffff/domain.png" alt="Website" width="30" height="30" />
